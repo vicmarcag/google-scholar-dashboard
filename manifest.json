@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Scholar Dashboard",
+  "version": "0.1.0",
+  "description": "Panel lateral con métricas de citas de Google Scholar para los autores que sigas.",
+  "permissions": ["storage", "alarms", "sidePanel", "offscreen"],
+  "host_permissions": ["https://scholar.google.com/*"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "side_panel": {
+    "default_path": "sidepanel/index.html"
+  },
+  "options_page": "options/index.html",
+  "action": {
+    "default_title": "Scholar Dashboard"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["fixtures/*.html"],
+      "matches": ["https://scholar.google.com/*"]
+    }
+  ]
+}

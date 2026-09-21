@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Scholar Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>Scholar Dashboard</h1>
+      <div class="topbar-actions">
+        <button id="refresh-all-btn" title="Refresh all">↻ Refresh all</button>
+        <a id="options-link" href="../options/index.html" target="_blank" title="Add/remove authors">⚙ Options</a>
+      </div>
+      <div class="sort-row">
+        <label for="sort-select">Sort by</label>
+        <select id="sort-select">
+          <option value="default">Date added</option>
+          <option value="hindex-desc">h-index (high → low)</option>
+          <option value="hindex-asc">h-index (low → high)</option>
+          <option value="name-asc">Name (A → Z)</option>
+          <option value="name-desc">Name (Z → A)</option>
+        </select>
+      </div>
+    </header>
+    <p id="warning-banner" class="warning-banner" hidden></p>
+    <main id="cards" class="cards"></main>
+    <p id="empty-state" class="empty-state" hidden>
+      You aren't following any authors yet. Go to
+      <a href="../options/index.html" target="_blank">Options</a> to add one.
+    </p>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

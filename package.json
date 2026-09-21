@@ -1,0 +1,19 @@
+{
+  "name": "scholar-dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:panel": "vite --config vite.panel-dev.config.js",
+    "build": "vite build",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "^2.0.0-beta.28",
+    "vite": "^5.4.10",
+    "vitest": "^2.1.4",
+    "jsdom": "^25.0.1"
+  }
+}
