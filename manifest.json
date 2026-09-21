@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Scholar Dashboard",
-  "version": "0.1.0",
-  "description": "Panel lateral con métricas de citas de Google Scholar para los autores que sigas.",
+  "version": "1.0.0",
+  "description": "Track citation metrics for the Google Scholar authors you follow, right from a browser side panel.",
   "permissions": ["storage", "alarms", "sidePanel", "offscreen"],
   "host_permissions": ["https://scholar.google.com/*"],
   "background": {
