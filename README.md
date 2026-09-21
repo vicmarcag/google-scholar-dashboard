@@ -71,7 +71,7 @@ distributed as a `.zip` file attached to the
 1. Click the extension icon (or right-click it → **Options**) to open the
    Options page.
 2. Paste the full URL of a Google Scholar profile (e.g.
-   `https://scholar.google.com/citations?user=XXXXXXXXXXXX&hl=en`) and
+   `https://scholar.google.com/citations?user=XXXXXXXXXXXX`) and
    click **Add**.
 3. Click **Save** to apply any settings changes (e.g. Test mode).
 
