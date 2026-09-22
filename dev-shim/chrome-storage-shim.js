@@ -52,7 +52,6 @@ const seedState = {
       data: null,
     },
   },
-  settings: { testMode: true },
 };
 
 let state = structuredClone(seedState);

@@ -5,8 +5,6 @@ if (typeof chrome === 'undefined' || !chrome.storage) {
 import {
   getAuthors,
   getCache,
-  getSettings,
-  setSettings,
   addAuthor,
   removeAuthor,
   onStorageChanged,
@@ -24,9 +22,6 @@ const form = document.getElementById('add-author-form');
 const input = document.getElementById('author-url-input');
 const errorMsg = document.getElementById('error-msg');
 const tableBody = document.getElementById('authors-table-body');
-const testModeToggle = document.getElementById('test-mode-toggle');
-const saveSettingsBtn = document.getElementById('save-settings-btn');
-const savedMsg = document.getElementById('saved-msg');
 
 async function render() {
   const [authors, cache] = await Promise.all([getAuthors(), getCache()]);
@@ -75,23 +70,5 @@ form.addEventListener('submit', async (e) => {
   render();
 });
 
-let savedMsgTimer = null;
-
-saveSettingsBtn.addEventListener('click', async () => {
-  await setSettings({ testMode: testModeToggle.checked });
-
-  savedMsg.hidden = false;
-  clearTimeout(savedMsgTimer);
-  savedMsgTimer = setTimeout(() => {
-    savedMsg.hidden = true;
-  }, 2000);
-});
-
-async function initSettings() {
-  const settings = await getSettings();
-  testModeToggle.checked = Boolean(settings.testMode);
-}
-
 onStorageChanged(() => render());
 render();
-initSettings();

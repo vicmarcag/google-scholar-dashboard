@@ -9,8 +9,8 @@ account, backend, or paid API involved.
   IMAGE 1 (hero/banner): a screenshot of the side panel itself, with 3-4
   author cards visible (photo, name, affiliation, citation metrics and the
   bar chart). This is the single most important image in the README — it's
-  what sells the extension at a glance. Take it with a couple of real or
-  test-mode profiles loaded so the cards look populated, not empty.
+  what sells the extension at a glance. Take it with a couple of real
+  profiles loaded so the cards look populated, not empty.
 -->
 ![Scholar Dashboard side panel](docs/images/dashboard-screenshot.png)
 
@@ -35,8 +35,6 @@ in between and no cost.
 - Clear "blocked" and "error" states shown directly on the affected card,
   instead of failing silently.
 - Sort authors by h-index or alphabetically.
-- A "Test mode" (in Options) that uses local sample data instead of real
-  network requests — useful for trying the extension out risk-free.
 
 ## Where to get it
 
@@ -73,7 +71,6 @@ distributed as a `.zip` file attached to the
 2. Paste the full URL of a Google Scholar profile (e.g.
    `https://scholar.google.com/citations?user=XXXXXXXXXXXX&hl=en`) and
    click **Add**.
-3. Click **Save** to apply any settings changes (e.g. Test mode).
 
 <!--
   IMAGE 3: a screenshot of the Options page with the "Add author" field
@@ -83,7 +80,7 @@ distributed as a `.zip` file attached to the
 -->
 ![Adding an author from the Options page](docs/images/options-add-author.png)
 
-4. Open the side panel to see the author's card. Use the ↻ button on a
+3. Open the side panel to see the author's card. Use the ↻ button on a
    card to refresh that author on demand, or **Refresh all** at the top to
    refresh everyone (still staggered, one request at a time).
 

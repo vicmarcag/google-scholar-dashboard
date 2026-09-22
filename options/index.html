@@ -27,8 +27,7 @@
         color: var(--text);
         font-size: 13px;
       }
-      .field-row button,
-      .save-btn {
+      .field-row button {
         padding: 8px 14px;
         border-radius: 6px;
         border: 1px solid var(--accent);
@@ -53,27 +52,6 @@
         text-align: left;
         padding: 8px;
         border-bottom: 1px solid var(--border);
-      }
-      .settings-row {
-        margin: 24px 0;
-        padding: 12px;
-        border: 1px solid var(--border);
-        border-radius: 8px;
-      }
-      .settings-row label {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-      .settings-actions {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin-top: 12px;
-      }
-      .saved-msg {
-        color: var(--ok);
-        font-size: 12px;
       }
       .hint {
         color: var(--muted);
@@ -110,17 +88,6 @@
         </thead>
         <tbody id="authors-table-body"></tbody>
       </table>
-    </section>
-
-    <section class="settings-row">
-      <label>
-        <input type="checkbox" id="test-mode-toggle" />
-        Test mode (use local fixtures instead of real requests to Scholar)
-      </label>
-      <div class="settings-actions">
-        <button type="button" id="save-settings-btn" class="save-btn">Save</button>
-        <span id="saved-msg" class="saved-msg" hidden>Saved.</span>
-      </div>
     </section>
 
     <script type="module" src="main.js"></script>

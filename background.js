@@ -1,8 +1,7 @@
-import { fetchProfileHtml, createFixtureFetcher } from './lib/fetcher.js';
+import { fetchProfileHtml } from './lib/fetcher.js';
 import { StaggeredQueue } from './lib/queue.js';
 import {
   getAuthors,
-  getSettings,
   setAuthorStatus,
   setAuthorData,
   setAuthorBlocked,
@@ -13,10 +12,6 @@ const REFRESH_ALARM = 'scholar-dashboard-daily-refresh';
 const QUEUE_SPACING_MS = 4000;
 const BLOCK_BACKOFF_HOURS = 6;
 
-const FIXTURE_MAP = {
-  default: 'fixtures/perfil_normal.html',
-};
-
 const OFFSCREEN_URL = 'offscreen/index.html';
 
 const blockedUntilByAuthor = new Map();
@@ -25,11 +20,6 @@ const queue = new StaggeredQueue({
   spacingMs: QUEUE_SPACING_MS,
   processItem: refreshAuthor,
 });
-
-async function getFetcher() {
-  const settings = await getSettings();
-  return settings.testMode ? createFixtureFetcher(FIXTURE_MAP) : fetchProfileHtml;
-}
 
 let creatingOffscreenPromise = null;
 
@@ -78,8 +68,7 @@ async function refreshAuthor(authorId) {
   await setAuthorStatus(authorId, 'pending');
 
   try {
-    const fetchHtml = await getFetcher();
-    const html = await fetchHtml(authorId);
+    const html = await fetchProfileHtml(authorId);
     const result = await parseHtmlOffscreen(html);
 
     if (result.blocked) {

@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Scholar Dashboard",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Track citation metrics for the Google Scholar authors you follow, right from a browser side panel.",
   "permissions": ["storage", "alarms", "sidePanel", "offscreen"],
   "host_permissions": ["https://scholar.google.com/*"],
@@ -27,11 +27,5 @@
     "32": "images/icon32.png",
     "48": "images/icon48.png",
     "128": "images/icon128.png"
-  },
-  "web_accessible_resources": [
-    {
-      "resources": ["fixtures/*.html"],
-      "matches": ["https://scholar.google.com/*"]
-    }
-  ]
+  }
 }

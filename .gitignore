@@ -141,3 +141,9 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# Packaged extension zips for GitHub releases
+build/
+
+# Internal project spec/instructions, not meant to be tracked
+CLAUDE.md
